@@ -18,8 +18,6 @@ console.info("🚀 Connected to MongoDB");
 const server = new ApolloServer({
   typeDefs,
   resolvers: {
-    Query,
-    Mutation
   },
 });
 

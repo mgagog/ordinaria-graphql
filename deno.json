@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-all main.ts"
+    "dev": "deno run --watch --allow-all --env main.ts"
   },
   "imports": {
     "@apollo/server": "npm:@apollo/server",
