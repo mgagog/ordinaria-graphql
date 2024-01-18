@@ -15,7 +15,7 @@ await mongoose.connect(MONGO_URL);
 
 console.info("🚀 Connected to MongoDB");
 
-const server = new ApolloServer({
+/*const server = new ApolloServer({
   typeDefs,
   resolvers: {
   },
@@ -23,3 +23,4 @@ const server = new ApolloServer({
 
 const { url } = await startStandaloneServer(server);
 console.info(`🚀 Server ready at ${url}`);
+*/
