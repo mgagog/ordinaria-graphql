@@ -25,7 +25,7 @@ export const Mutation = {
             const contact = {
                 nombre: args.nombre,
                 apellidos: args.apellidos,
-                numtelefono: args.numTelefono,
+                numTelefono: args.numTelefono,
                 pais: pais,
             }
             
@@ -35,7 +35,7 @@ export const Mutation = {
                 id: newContact._id.toString(),
                 nombre: newContact.nombre,
                 apellidos: newContact.apellidos,
-                numtelefono: newContact.numTelefono,
+                numTelefono: newContact.numTelefono,
                 pais: newContact.pais,
                 horaCapital: time
             };
@@ -67,7 +67,7 @@ export const Mutation = {
                 {
                     nombre: args.nombre,
                     apellidos: args.apellidos,
-                    numtelefono: args.numTelefono,
+                    numTelefono: args.numTelefono,
                     pais: pais,
                 },
                 {new: true, runValidators: true}
@@ -80,7 +80,7 @@ export const Mutation = {
                 id: updatedContact._id.toString(),
                 nombre: updatedContact.nombre,
                 apellidos: updatedContact.apellidos,
-                numtelefono: updatedContact.numTelefono,
+                numTelefono: updatedContact.numTelefono,
                 pais: updatedContact.pais,
                 horaCapital: time
             };;
@@ -111,7 +111,7 @@ export const Mutation = {
                 id: deletedContact._id.toString(),
                 nombre: deletedContact.nombre,
                 apellidos: deletedContact.apellidos,
-                numtelefono: deletedContact.numTelefono,
+                numTelefono: deletedContact.numTelefono,
                 pais: deletedContact.pais,
                 horaCapital: time
             };;
