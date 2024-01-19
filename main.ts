@@ -7,8 +7,9 @@ import mongoose from "mongoose";
 
 // Deno Deploy: mgagog-gql.deno.dev/
 const MONGO_URL = Deno.env.get("MONGO_URL");
-if (!MONGO_URL) {
-  throw new Error("Please provide a MongoDB connection string");
+const API_KEY = Deno.env.get("API_KEY");
+if (!MONGO_URL || !API_KEY) {
+  throw new Error("Please provide a MongoDB connection string and an API KEY");
 }
 
 // Connect to MongoDB
@@ -19,9 +20,12 @@ console.info("🚀 Connected to MongoDB");
 const server = new ApolloServer({
   typeDefs,
   resolvers: {
+    Query,
+    Mutation
   },
 });
 
 const { url } = await startStandaloneServer(server);
 console.info(`🚀 Server ready at ${url}`);
+
 
